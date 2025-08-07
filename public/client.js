@@ -1,4 +1,5 @@
-const socket = new WebSocket(`ws://${location.host}`);
+const protocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+const socket = new WebSocket(`${protocol}//${location.host}`);
 const startBtn = document.getElementById("start");
 const stopBtn = document.getElementById("stop");
 const bpmInput = document.getElementById("bpm");
